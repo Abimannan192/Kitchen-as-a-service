@@ -1,0 +1,42 @@
+<section class="vh-100 banner">
+  <div class=" d-flex align-items-center h-100 ">
+    <div class="container ">
+      <div class="row d-flex justify-content-left ">
+        <div class=" col-lg-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-3">
+              <div>
+                <img
+                  src="https://img.uxwing.com/wp-content/themes/uxwing/download/food-drinks-cooking/chef-icon.svg"
+                  style="width: 90px;" alt="logo">
+              </div>
+              <h2 class=" text-center fw-bold">Please login to your account</h2>
+              <form>
+                <div class="form-outline mb-2">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput name="fName" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                  </mat-form-field>
+                </div>
+
+                <div class="form-outline mb-2">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput name="fName" [(ngModel)]="password" minlength="5"
+                      [ngModelOptions]="{standalone: true}">
+                  </mat-form-field>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <button type="submit" class="btn btn-lg " (click)="register()">Login</button>
+                </div>
+                <h6 class="text-center mb-1">By clicking on Login, I accept the <span class="fw-bold">Terms & Condition & Privacy Policy</span></h6>
+                <p class="text-center text-muted mt-3 mb-1">Don't have an account? <a routerLink="/sign-up"
+                    class="fw-bold text-body"><u>Register here</u></a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

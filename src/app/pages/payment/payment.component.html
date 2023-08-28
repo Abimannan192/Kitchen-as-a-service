@@ -1,0 +1,70 @@
+<div class="payment">
+    <div class="pay-details">
+        <mat-card id="card">
+            <mat-card-title>
+                <div matBadge="1" matBadgeSize="large" class="demo-section">
+                    Billing Info
+                </div>
+            </mat-card-title>
+            <form #bill="ngForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput name="fName" [(ngModel)]="fname" minlength="5" >
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput name="lName" [(ngModel)]="lname" minlength="1">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input matInput name="Addr" [(ngModel)]="Addr" minlength="10">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone</mat-label>
+                    <input matInput name="phone" type="tel" [(ngModel)]="phone" minlength="10">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Country</mat-label>
+                    <input matInput name="country" [(ngModel)]="country" readonly>
+                </mat-form-field>
+                <br>
+                <button mat-raised-button class="pay-btn" color="primary" (click)="continue()">Continue</button>
+            </form>
+        </mat-card>
+    <div class="text-center">
+        <mat-card id="card">
+            <mat-card-title>
+                <div matBadge="2" matBadgeSize="large" class="demo-section">
+                    Payment Details
+                </div>
+            </mat-card-title>
+            <h1>{{grandTotal | currency:"INR"}}</h1>
+            <h1>Online Payment</h1>
+            <form #payment="ngForm">
+                <mat-form-field appearance="fill">
+                    <mat-label>Select Payment Option</mat-label>
+                    <mat-select [(value)]="selected">
+                        <mat-option value="bhim" name="bhim" [(ngModel)]="bhim" ngDefaultControl>BHIM UPI</mat-option>
+                        <mat-option value="paytm" name="paytm" [(ngModel)]="paytm" ngDefaultControl>Paytm</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>UPI ID</mat-label>
+                    <input matInput name="card-num" [(ngModel)]="upi" minlength="6" >
+                </mat-form-field>
+            </form>
+            <button mat-raised-button class="pay-btn" [disabled]="disableBtn" color="primary"
+                (click)="pay()">Pay</button>
+                <br>        
+            <h1>(OR)</h1>
+            <button mat-raised-button class="pay-btn " color="primary"
+              routerLink="/tracker"  >Cash On Delivery</button>
+        </mat-card>
+    </div>    
+    </div>
+</div>

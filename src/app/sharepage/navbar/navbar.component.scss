@@ -1,0 +1,42 @@
+$color_1: rgb(25, 135, 8);
+$color_2: black;
+$color_3: white;
+$background-color_1: #000000;
+
+.navbar {
+	background-color: $background-color_1;
+	.navbar-nav {
+		.nav-link {
+			color: $color_3;
+			font-family: 'Raleway', sans-serif;
+		}
+		.nav-link.active-link {
+			color: $color_3;
+			text-decoration: underline;
+		}
+	}
+}
+
+.navbar-brand {
+	font-weight: 900;
+}
+
+a {
+	font-family: 'Roboto Condensed', sans-serif;
+	color: $color_3;
+
+	&:hover {
+		color: $color_1;
+	}
+}
+
+.btn {
+	background-color: $color_3;
+	color: #000000;
+	font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+	color: $color_3;
+
+}

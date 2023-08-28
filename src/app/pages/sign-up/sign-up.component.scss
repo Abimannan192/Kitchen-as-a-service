@@ -1,0 +1,19 @@
+$color_2: black;
+$color_3: white;
+
+
+.banner {
+    background-image: url('../../../assets/img/background.jpg');
+    background-position: center top;
+    background-size: cover;
+}
+
+.btn {
+    background-color: $color_2;
+    color: $color_3;
+    font-family: 'Raleway', sans-serif;
+}
+
+mat-form-field {
+    width: 92%;
+}

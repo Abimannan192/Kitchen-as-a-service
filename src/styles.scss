@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import 'https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap';
+
+// $color_1: #61ea05;
+$color_2: black;
+$color_3: white;
+$background-color_1: #000000;

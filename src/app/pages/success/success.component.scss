@@ -1,0 +1,26 @@
+$color_2: black;
+$color_3: white;
+
+.content {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.imggif {
+  width: 600px;
+}
+
+.btn {
+  color: $color_3;
+  background-color: $color_2;
+  font-family: 'Open sans', serif;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+}

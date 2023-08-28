@@ -1,0 +1,26 @@
+$color_1: #61ea05;
+$color_2: rgb(0, 0, 0);
+$color_3: white;
+$background-color_1: #000000;
+
+img{	 
+	margin-left: 30%;
+}
+.btn{
+    background-color: $color_2;
+    color:$color_3 ;
+    font-family: 'Raleway', sans-serif;
+}
+.banner
+{
+    background-image: url('../../../assets/img/background.jpg');
+    height: 550px;
+    background-position: center top;
+    background-size: cover;
+}
+h3{
+    font-family: 'Open Sans', sans-serif;
+}
+mat-form-field {
+    width: 100%;
+}

@@ -1,0 +1,37 @@
+<div class="container mt-5 mb-5">
+    <div class="row" *ngFor="let e of menuData">
+        <div class="col-lg-6">
+            <a routerLink="../../menu" class="btn mb-3 ">Back</a>
+            <img src={{e.foodImg}} width="100%" />
+        </div>
+        <div class="col-lg-6 col-12">
+            <h1>Food Details</h1>
+            <h2 class="mt-4">{{e.foodName}}</h2>
+            <div class="star">
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+                <p>4 out of 5</p>      
+            </div>
+            <h3><i class="fa fa-clock-o"></i>&nbsp; 40 MIN</h3>
+            <p class="mt-4">{{e.foodDetails}}</p>
+            <p>{{e.foodPrice | currency :'INR'}}</p>
+            <button class="btn" (click)="addtoCart(e,myDialog)">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+<ng-template #myDialog>
+    
+    <h1 class="title" matDialogTitle>Thank You!</h1>
+    <mat-dialog-content>
+        <p>Food added to your Bag</p>
+    </mat-dialog-content>
+
+    <mat-dialog-actions >
+        <button mat-raised-button matDialogClose class="btna" routerLink="/cart">OK</button>
+        <button mat-raised-button class="btna" matDialogClose routerLink="/menu"> ADD FOOD</button>
+    </mat-dialog-actions>
+
+</ng-template>

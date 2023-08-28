@@ -1,0 +1,36 @@
+<div class="cart">
+    <mat-card>
+        <table>
+            <tr *ngIf="dish.length!=0" class="table-head">
+                <td>S.No</td>
+                <td>Name</td>
+                <td>Price</td>
+                <td></td>
+            </tr>
+            <ng-container>
+                <ng-container *ngIf="dish.length==0">
+                    <h1>Your Cart is empty!</h1>
+                    <h3>Add some Food items</h3>
+                </ng-container>
+            </ng-container>
+            <tr *ngFor="let element of dish; let i =index">
+                <td class="cart-text">{{i+1}}</td>
+                <td class="cart-content">
+                    <img src={{element.foodImg}} class="cart-img">
+                    <span class="cart-name">{{element.foodName}}</span>
+                </td>
+                <td class="cart-text">{{element.foodPrice | currency:"INR"}}</td>
+                <td>
+                    <button mat-fab color="secondary" class="del" (click)="deleteItem(element)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </mat-card>
+    <div class="actions" *ngIf="dish.length!=0">
+        <h1 class="total">Grand Total: {{grandTotal | currency:"INR"}}</h1>
+        <button mat-raised-button class="btn" (click)="emptyCart()">Empty Cart</button>
+        <button mat-raised-button routerLink="/payment" class="confirm btn">Proceed to Buy</button>
+    </div>
+</div>

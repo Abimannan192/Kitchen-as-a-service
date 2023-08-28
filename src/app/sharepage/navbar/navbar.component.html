@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" routerLink="">
+      KITCHEN AS A SERVICE </a>
+    <div class="collapse navbar-collapse" *ngIf=" pageName !== '/log-in' && pageName !== '/sign-up' && pageName !== '/' " id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="menu" routerLinkActive="active-link">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="active-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contact" routerLinkActive="active-link">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="cart" routerLinkActive="active-link">Cart</a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <button type="button" routerLink="log-in" class="btn btn-light" routerLinkActive="active-link">
+            Log out
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-item" *ngIf="pageName == '/'">
+      <button type="button" routerLink="/log-in" class="btn">
+        Login</button>&nbsp;
+      <button type="button" routerLink="/sign-up" class="btn">
+        Register
+      </button>
+    </div>
+  </div>
+</nav>

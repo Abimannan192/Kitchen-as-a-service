@@ -1,0 +1,15 @@
+$color_2: black;
+$color_3: white;
+$background-color_1: #000000;
+h1{
+    padding-top: 30px;
+    color: $color_2;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: bold; 
+    text-align: center;
+}
+.btn{
+    background-color:$background-color_1;
+    color: $color_3;
+    margin-bottom: 30px;
+}

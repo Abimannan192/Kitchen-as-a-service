@@ -1,0 +1,110 @@
+.payment {
+    z-index: 1;
+}
+
+h2 {
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
+mat-toolbar {
+    box-shadow: 0px 1px 6px rgb(112, 112, 112);
+    height: 60px;
+}
+
+mat-toolbar span {
+    font-size: 20px;
+}
+
+#card-method {
+    padding: 40px;
+    width: 80%;
+    margin: 30px 10%;
+}
+
+mat-button-toggle-group {
+    width: 500px;
+    margin-left: 30%;
+}
+
+mat-button-toggle {
+    padding: 20px;
+    margin: 30px;
+}
+
+mat-button-toggle img {
+    width: 100px;
+}
+
+#card {
+    max-width: 500px;
+    padding: 40px;
+    margin-right: 5%;
+    height: 100%;
+    width: 100%;
+    &:hover {
+        transition: all 0.1s ease-out;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+      }
+}
+
+mat-card-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.pay-btn {
+    margin-top: 10px;
+    margin-right: auto;
+    font-size: 17px;
+    background-color: black !important;
+    color: white !important;
+}
+
+.pay-btn:disabled {
+    background-color: rgb(99, 98, 98) !important;
+}
+
+
+.pay-details {
+    display: flex;
+    margin: 30px 10%;
+}
+
+mat-form-field {
+    width: 280px;
+}
+
+
+@media only screen and (max-width: 840px) {
+
+    #card,
+    #card-method {
+        max-width: 330px;
+        padding: 25px;
+    }
+
+    mat-form-field {
+        width: 250px;
+        height: 70px;
+    }
+
+    .pay-details {
+        display: block;
+        margin: 10%;
+    }
+
+    mat-button-toggle-group {
+        width: 290px;
+        margin-left: 0px;
+
+        mat-button-toggle {
+            padding: 10px;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+}

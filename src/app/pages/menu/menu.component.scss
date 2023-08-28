@@ -1,0 +1,72 @@
+$color_2: black;
+$color_3: white;
+
+.foodbox {
+	background-color: $color_3;
+	padding: 10px 10px;
+	&:hover {
+        transition: all 0.1s ease-out;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+      }
+
+	img {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		border-radius: 5px;
+	}
+
+	h1 {
+		font-size: 18px;
+		margin-top: 20px;
+		font-weight: bold;
+		color: $color_2;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	p {
+		color: $color_2;
+		font-family: 'Roboto Condensed', sans-serif;
+
+	}
+}
+
+.btn {
+	border-radius: 20px;
+	margin-left: auto;
+	color: $color_3;
+	background-color: $color_2;
+
+}
+
+.pagee {
+	display: flex;
+	justify-content: center;
+
+	.page-link {
+		color: $color_2;
+	}
+
+	.page-link.active,
+	.active.page-link {
+		color: $color_3;
+		background-color: $color_2;
+		border-color: $color_2;
+	}
+}
+.star {
+    margin: 10px 0px;
+    display: flex;
+    p {
+        margin: 1px;
+        font-size: 16px;
+    }
+}
+mat-icon {
+    font-size: 22px;
+    color: rgba(247, 173, 0, 0.715);
+    cursor: pointer;
+}
+page{
+	background-color: black;
+}

@@ -1,0 +1,48 @@
+$color_1: #f3f3f3;
+$color_2: black;
+$color_3: white;
+$color_4:rgb(61, 192, 61);
+$background-color_1: #000000;
+
+.footer {
+	overflow: hidden;
+	position: sticky;
+	top: 100%;
+	background-color: $background-color_1;
+	padding: 5px 10px;
+}
+
+h1 {
+	font-weight: bold;
+	color: $color_3;
+	font-size: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+p {
+	color: $color_3;
+	font-size: 10px;
+	text-align: left;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+	color: $color_1;
+	text-decoration: none;
+	padding: 10px ;
+	font-size: 22px;
+
+	&:hover {
+		color: $color_4;
+	}
+}
+
+.icon {
+	padding: auto;
+	margin-right: -120px;
+}
+
+h6 {
+	color: $color_3;
+	font-size: 15px;
+}
